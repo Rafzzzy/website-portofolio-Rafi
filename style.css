@@ -1,0 +1,447 @@
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    } 
+    header {
+      background: #3a7070;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    nav {
+      background: #86a5a5;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: black;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #4b8c8c;
+      color: white;
+    }
+    nav a.active {
+      background: #3a7070;
+      color: white;
+    }
+    .content {
+      display: none;
+      padding: 20px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .content.active {
+      display: block;
+    }
+
+/* Responsif di HP */
+@media (max-width: 768px) {
+  .beranda-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .beranda-foto img {
+    max-width: 250px;
+    margin-top: 20px;
+  }
+}
+
+/* =====  SECTION(beranda)===== */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  background-color: #ffffff;
+  padding: 50px 100px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 50px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.intro-text {
+  color: #888;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.hero-name {
+  font-size: 60px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.hero-name span {
+  color: #5b8586;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  max-width: 550px;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-image img {
+  max-width: 450px;
+  height: auto;
+}
+
+/* ===== SECTION(tentang)===== */
+#tentang {
+  padding: 60px 10%;
+  background-color: #f8fbfd;
+  color: #1a1a1a;
+  line-height: 1.8;
+}
+
+.tentang-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tentang-container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.tentang-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.tentang-image img {
+  width: 270px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tentang-text {
+  flex: 1;
+  text-align: justify;
+  font-size: 16px;
+}
+
+.tentang-text b {
+  color: #003f4f;
+}
+
+.tentang-text p {
+  margin-bottom: 15px;
+}
+
+/* ===== SECTION(education)===== */
+/* Section umum */
+.content {
+  display: none;
+  padding: 60px 20px;
+  background-color: #f4f8f8;
+  min-height: 80vh;
+}
+
+.content.active {
+  display: block;
+}
+
+/* Judul utama */
+.judul-section {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #2f4f4f;
+}
+
+/* Grid untuk kotak pendidikan */
+.education-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Kotak tiap sekolah */
+.education-card {
+  background-color: #86a5a5;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.education-card h3 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.education-card p {
+  color: #444;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* ===== TOOLS SECTION(keahlihan)===== */
+#keahlian {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#keahlian h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+#keahlian p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.tool-card {
+  background-color: #86a5a5;
+  border: 2px solid #5b8586;
+  border-radius: 12px;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.tool-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.tool-card h3 {
+  color: #2c3e50;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.tool-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ====Section proyek====*/
+#proyek {
+  padding: 40px 80px;
+  background-color: #f9fafa;
+}
+/* Judul utama */
+#proyek h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #2c3e3e;
+}
+/* Deskripsi */
+#proyek p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+}
+/* Setiap kategori proyek */
+.project-category {
+  margin-bottom: 50px;
+}
+.project-category h3 {
+  font-size: 20px;
+  color: #2a5959;
+  margin-bottom: 15px;
+  border-left: 4px solid #2a5959;
+  padding-left: 10px;
+}
+/* Galeri gambar */
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.project-gallery img {
+  width: 100%;
+  max-width: 250px; /* <<< ubah ukuran maksimal di sini */
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.project-gallery img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.project-gallery img {
+  width: 280px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Efek hover */
+.project-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+  #proyek {
+    padding: 20px;
+  }
+
+  .project-gallery img {
+    width: 90%;
+  }
+}
+    img {
+      max-width: 300px;
+      border-radius: 10px;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    
+ /* ===== SECTION Kontak===== */
+     body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f6f9fc;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #1d1d1d;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    p.subtitle {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 50px;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .contact-card {
+      background-color: #86a5a5;
+      width: 230px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      padding: 30px 20px;
+      transition: 0.3s;
+      text-align: center;
+      border: 1px solid #fdfdfd;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-card i {
+      font-size: 38px;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .contact-card h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #1f1f1f;
+    }
+
+    .contact-card p {
+      margin-top: 8px;
+      color: #ffffff;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+/* Footer */
+footer {
+  background-color: #4a787d;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
